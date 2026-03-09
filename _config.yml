@@ -5,7 +5,7 @@ keywords: null
 author: John Doe
 language: en
 timezone: ''
-url: https://GinPd.github.io/GinPd.github.io
+url: GinPd.github.io/GinPd.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
