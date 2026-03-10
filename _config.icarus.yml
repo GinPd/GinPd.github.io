@@ -173,53 +173,35 @@ search:
     type: insight
     # Whether to include pages in the search results
     index_pages: true
-# Comment plugin configurations
+# Comment plugin configurations (Giscus 版本，推荐国内使用)
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: disqus
-    # Disqus shortname
-    shortname: ''
+    type: giscus
+    # 以下参数需从 Giscus 官网生成：https://giscus.app/zh-CN
+    repo: 'GinPd/GinPd.github.io'  # 你的 GitHub 仓库，格式：用户名/仓库名（如 GinPd/hexo-blog-source）
+    repo_id: 'R_kgDORf2h9Q'  # Giscus 生成的仓库 ID
+    category: 'Comment'  # 评论所属分类（如 General）
+    category_id: 'DIC_kwDORf2h9c4C4Do2'  # Giscus 生成的分类 ID
+    mapping: url  # 评论映射方式（默认 pathname 即可）
+    reactions_enabled: 1  # 是否显示表情反应（1=开启，0=关闭）
+    emit_metadata: 0  # 是否发送元数据（默认 0 即可）
+    input_position: top  # 评论输入框位置（bottom/top）
+    lang: zh-CN  # 评论区语言（中文）
+    lazy_load: true  # 懒加载（提升页面加载速度）
+    crossorigin: anonymous  # 跨域设置（默认即可）
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
-    # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
     # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
         qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
     # Wechat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
         qrcode: ''
-# Share plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -244,35 +226,30 @@ widgets:
         # Author title
         author_title: 一名平凡开发者
         # Author's current location
-        location: Your location
+        location: Hefei
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://web-240513.oss-cn-hangzhou.aliyuncs.com/images/GinPd.png
         # Whether show the rounded avatar image
-        avatar_rounded: false
+        avatar_rounded: true
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/GinPd
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
                 url: https://github.com/GinPd
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
-            Twitter:
-                icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
-            RSS:
-                icon: fas fa-rss
-                url: /
             CSDN:
                 icon: csdn-icon  # 自定义CSDN图标
                 url: https://blog.csdn.net/GinPd
+
+    # Profile widget configurations
+    - 
+        # latest posts
+        position: right
+        type: recent_posts
+
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -284,6 +261,7 @@ widgets:
         collapsed: true
         # Maximum level of headings to show (1-6)
         depth: 3
+
     # Recommendation links widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -293,21 +271,25 @@ widgets:
         links:
             Hexo: https://hexo.io
             Bulma: https://bulma.io
+
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: categories
+
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: recent_posts
+
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: archives
+
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -319,6 +301,7 @@ widgets:
         amount: 
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
+
     # Google FeedBurner email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -328,6 +311,7 @@ widgets:
         description: 
         # Feedburner ID
         feedburner_id: ''
+
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -337,6 +321,7 @@ widgets:
         client_id: ''
         # AdSense AD unit ID
         slot_id: ''
+
     # Follow.it email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -348,6 +333,7 @@ widgets:
         action_url: ''
         # Feed claiming verification code
         verification_code: ''
+        
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
@@ -428,9 +414,10 @@ plugins:
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
-    # Name or URL template of the JavaScript and/or stylesheet CDN provider
-    cdn: jsdelivr
-    # Name or URL template of the webfont CDN provider
-    fontcdn: google
-    # Name or URL of the fontawesome icon font CDN provider
-    iconcdn: fontawesome
+  # Name or URL template of the JavaScript and/or stylesheet CDN provider
+  cdn: loli
+  # Name or URL template of the webfont CDN provider
+  #默认用的google
+  fontcdn: loli
+  # Name or URL of the fontawesome icon font CDN provider
+  iconcdn: loli
