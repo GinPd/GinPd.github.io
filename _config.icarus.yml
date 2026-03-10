@@ -5,7 +5,7 @@ variant: default
 # Path or URL to the website's logo
 logo: /img/logo.svg
 # Page metadata configurations
-language: zh-CN  # 全局语言设置为中文（取消注释并生效）
+language: zh-CN  # 全局语言设置为中文
 head:
     # URL or path to the website's icon
     favicon: /img/favicon.svg
@@ -271,8 +271,8 @@ widgets:
                 icon: fas fa-rss
                 url: /
             CSDN:
-                icon: csdn-icon  # 自定义CSDN图标class
-                url: https://blog.csdn.net/GinPd  # 你的CSDN地址（已确认）
+                icon: csdn-icon  # 自定义CSDN图标
+                url: https://blog.csdn.net/GinPd
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
