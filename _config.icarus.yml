@@ -5,6 +5,7 @@ variant: default
 # Path or URL to the website's logo
 logo: /img/logo.svg
 # Page metadata configurations
+language: zh-CN  # 全局语言设置为中文（取消注释并生效）
 head:
     # URL or path to the website's icon
     favicon: /img/favicon.svg
@@ -101,6 +102,12 @@ head:
         - ''
     # URL or path to the website's RSS atom.xml
     rss: 
+# 新增：日夜模式配置（Icarus 5.1.0 专属）
+appearance:
+    dark_mode:
+        enable: true        # 开启暗黑模式
+        default: auto       # 跟随系统（可选 light/dark/auto）
+        toggle: true        # 显示切换按钮
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
@@ -115,10 +122,13 @@ navbar:
         Download on GitHub:
             icon: fab fa-github
             url: https://github.com/ppoffice/hexo-theme-icarus
+# 新增：引入自定义CSS（用于CSDN图标）
+styles:
+  - /css/custom.css  # 引入CSDN图标样式
 # Page footer configurations
 footer:
     # Copyright text
-    copyright: © 2019
+    copyright: 用💖发电，所有文章均可转载，同时请标明来源，禁止用于商业用途
     # Links to be shown on the right of the footer section
     links:
         Creative Commons:
@@ -129,7 +139,7 @@ footer:
             url: https://creativecommons.org/licenses/by/4.0/
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/GinPd
 # Article related configurations
 article:
     # Code highlight settings
@@ -141,6 +151,7 @@ article:
         clipboard: true
         # Default folding status of the code blocks. Can be "", "folded", "unfolded"
         fold: unfolded
+        lang: true
     # Whether to show estimated article reading time
     readtime: true
     # Whether to show updated time. For "auto", shows article update time only when page.updated is set and it is different from page.date
@@ -229,9 +240,9 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: GinPd
         # Author title
-        author_title: Your title
+        author_title: 一名平凡开发者
         # Author's current location
         location: Your location
         # URL or path to the avatar image
@@ -246,7 +257,7 @@ widgets:
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
+                url: https://github.com/GinPd
             Facebook:
                 icon: fab fa-facebook
                 url: https://facebook.com
@@ -259,6 +270,9 @@ widgets:
             RSS:
                 icon: fas fa-rss
                 url: /
+            CSDN:
+                icon: csdn-icon  # 自定义CSDN图标class
+                url: https://blog.csdn.net/GinPd  # 你的CSDN地址（已确认）
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar

@@ -1,0 +1,16 @@
+/* source/css/custom.css */
+/* 自定义CSDN图标样式 */
+.csdn-icon {
+    /* 使用CSDN官方图标（在线链接） */
+    background: url("https://g.csdnimg.cn/static/logo/favicon32.ico") no-repeat center center;
+    background-size: 16px 16px;  /* 图标大小 */
+    display: inline-block;
+    width: 16px;  /* 图标宽度 */
+    height: 16px; /* 图标高度 */
+    vertical-align: middle;
+    margin-right: 4px;  /* 和文字间距 */
+}
+/* 兼容Icarus主题的图标样式 */
+.social-links a[title="CSDN"] i.csdn-icon {
+    font-size: 0;  /* 清空默认字体 */
+}
