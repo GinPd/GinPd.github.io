@@ -118,7 +118,7 @@ navbar:
 # Page footer configurations
 footer:
     # Copyright text
-    copyright: © 2019
+    copyright: 用💖发电，所有文章均可转载，同时请标明来源，禁止用于商业用途
     # Links to be shown on the right of the footer section
     links:
         Creative Commons:
@@ -129,7 +129,7 @@ footer:
             url: https://creativecommons.org/licenses/by/4.0/
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/GinPd
 # Article related configurations
 article:
     # Code highlight settings
