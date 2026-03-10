@@ -5,6 +5,7 @@ variant: default
 # Path or URL to the website's logo
 logo: /img/logo.svg
 # Page metadata configurations
+# language: zh-CN  # 全局语言设置为中文
 head:
     # URL or path to the website's icon
     favicon: /img/favicon.svg
@@ -230,9 +231,9 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: GinPd
         # Author title
-        author_title: Your title
+        author_title: 一名平凡开发者
         # Author's current location
         location: Your location
         # URL or path to the avatar image
@@ -247,7 +248,7 @@ widgets:
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
+                url: https://github.com/GinPd
             Facebook:
                 icon: fab fa-facebook
                 url: https://facebook.com
@@ -260,6 +261,9 @@ widgets:
             RSS:
                 icon: fas fa-rss
                 url: /
+            CSDN:
+                icon: csdn-icon
+                url: https://blog.csdn.net/GinPd
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
