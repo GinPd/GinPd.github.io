@@ -5,7 +5,11 @@ variant: default
 # Path or URL to the website's logo
 logo: /img/logo.svg
 # Page metadata configurations
+<<<<<<< HEAD
+language: zh-CN  # 全局语言设置为中文（取消注释并生效）
+=======
 # language: zh-CN  # 全局语言设置为中文
+>>>>>>> 9bdbf0ad556e9e63e3aaf6f85085a9baf84fcea8
 head:
     # URL or path to the website's icon
     favicon: /img/favicon.svg
@@ -102,6 +106,12 @@ head:
         - ''
     # URL or path to the website's RSS atom.xml
     rss: 
+# 新增：日夜模式配置（Icarus 5.1.0 专属）
+appearance:
+    dark_mode:
+        enable: true        # 开启暗黑模式
+        default: auto       # 跟随系统（可选 light/dark/auto）
+        toggle: true        # 显示切换按钮
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
@@ -116,6 +126,9 @@ navbar:
         Download on GitHub:
             icon: fab fa-github
             url: https://github.com/ppoffice/hexo-theme-icarus
+# 新增：引入自定义CSS（用于CSDN图标）
+styles:
+  - /css/custom.css  # 引入CSDN图标样式
 # Page footer configurations
 footer:
     # Copyright text
@@ -262,8 +275,13 @@ widgets:
                 icon: fas fa-rss
                 url: /
             CSDN:
+<<<<<<< HEAD
+                icon: csdn-icon  # 自定义CSDN图标class
+                url: https://blog.csdn.net/GinPd  # 你的CSDN地址（已确认）
+=======
                 icon: csdn-icon
                 url: https://blog.csdn.net/GinPd
+>>>>>>> 9bdbf0ad556e9e63e3aaf6f85085a9baf84fcea8
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
