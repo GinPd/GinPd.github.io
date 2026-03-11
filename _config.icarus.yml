@@ -188,8 +188,8 @@ comment:
     type: giscus
     repo: GinPd/GinPd.github.io
     repoId: R_kgDORf2h9Q
-    category: General
-    categoryId: DIC_kwDORf2h9c4C4DmH
+    category: Comment
+    categoryId: DIC_kwDORf2h9c4C4Do2
     mapping: pathname          # 评论映射方式
     strict: 0                 
     reactionsEnabled: 1       # 表情反应
