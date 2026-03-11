@@ -11,7 +11,7 @@ head:
     favicon: /img/favicon.svg
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
-    manifest:
+    manifest: 
         # Name of the web application (default to the site title)
         name: 
         # The displayed name of the web application
@@ -35,6 +35,7 @@ head:
                 sizes: ''
                 # A hint as to the media type of the image
                 type: 
+
     # Open Graph metadata
     # https://hexo.io/docs/helpers.html#open-graph
     open_graph:
@@ -71,6 +72,7 @@ head:
         fb_admins: 
         # Facebook App ID
         fb_app_id: 
+
     # Structured data of the page
     # https://developers.google.com/search/docs/guides/intro-structured-data
     structured_data:
@@ -102,29 +104,34 @@ head:
         - ''
     # URL or path to the website's RSS atom.xml
     rss: 
-# 新增：日夜模式配置（Icarus 5.1.0 专属）
+
+# 夜模式配置
 appearance:
     dark_mode:
         enable: true        # 开启暗黑模式
         default: auto       # 跟随系统（可选 light/dark/auto）
         toggle: true        # 显示切换按钮
+
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
     menu:
         Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
+        Archives: /归档
+        Categories: /分类
+        Tags: /标签
+        About: /关于
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
             icon: fab fa-github
             url: https://github.com/ppoffice/hexo-theme-icarus
-# 新增：引入自定义CSS（用于CSDN图标）
+
+# 新增：引入自定义CSS
 styles:
-  - /css/custom.css  # 引入CSDN图标样式
+  - /css/custom.css  
+
+
 # Page footer configurations
 footer:
     # Copyright text
@@ -167,28 +174,32 @@ article:
         Noncommercial:
             icon: fab fa-creative-commons-nc
             url: https://creativecommons.org/licenses/by-nc/4.0/
+
 # Search plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:
     type: insight
     # Whether to include pages in the search results
     index_pages: true
+
 # Comment plugin configurations (Giscus 版本，推荐国内使用)
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
     type: giscus
-    # 以下参数需从 Giscus 官网生成：https://giscus.app/zh-CN
-    repo: 'GinPd/GinPd.github.io'  # 你的 GitHub 仓库，格式：用户名/仓库名（如 GinPd/hexo-blog-source）
-    repo_id: 'R_kgDORf2h9Q'  # Giscus 生成的仓库 ID
-    category: 'Comment'  # 评论所属分类（如 General）
-    category_id: 'DIC_kwDORf2h9c4C4Do2'  # Giscus 生成的分类 ID
-    mapping: url  # 评论映射方式（默认 pathname 即可）
-    reactions_enabled: 1  # 是否显示表情反应（1=开启，0=关闭）
-    emit_metadata: 0  # 是否发送元数据（默认 0 即可）
-    input_position: top  # 评论输入框位置（bottom/top）
-    lang: zh-CN  # 评论区语言（中文）
-    lazy_load: true  # 懒加载（提升页面加载速度）
-    crossorigin: anonymous  # 跨域设置（默认即可）
+    repo: GinPd/GinPd.github.io
+    repoId: R_kgDORf2h9Q
+    category: General
+    categoryId: DIC_kwDORf2h9c4C4DmH
+    mapping: pathname          # 评论映射方式
+    strict: 0                 
+    reactionsEnabled: 1       # 表情反应
+    theme: preferred_color_scheme 
+    emitMetadata: 0           # 元数据发送
+    inputPosition: bottom     # 输入框位置
+    lang: zh-CN                # 语言
+    lazyLoad: true            # 懒加载
+    crossorigin: anonymous     # 跨域
+
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
@@ -202,17 +213,19 @@ donates:
         type: wechat
         # Wechat qrcode image URL
         qrcode: ''
+
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
     # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true
     # Right sidebar configurations
     right:
         # Whether the sidebar sticks to the top when page scrolls
         sticky: false
+
 # Sidebar widget configurations
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
@@ -224,11 +237,11 @@ widgets:
         # Author name
         author: GinPd
         # Author title
-        author_title: 一名平凡开发者
+        author_title: from heart
         # Author's current location
-        location: Hefei
+        location: B612
         # URL or path to the avatar image
-        avatar: https://web-240513.oss-cn-hangzhou.aliyuncs.com/images/GinPd.png
+        avatar: /images/GinPd.png   # https://raw.githubusercontent.com/GinPd/GinPd.github.io/main/source/images/GinPd.png
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
@@ -241,13 +254,16 @@ widgets:
                 icon: fab fa-github
                 url: https://github.com/GinPd
             CSDN:
-                icon: csdn-icon  # 自定义CSDN图标
+                icon: fa-pencil # csdn-icon  # 自定义CSDN图标
                 url: https://blog.csdn.net/GinPd
-
+            LeetCode:
+                icon: fa-code
+                url: https://leetcode.cn/u/vino-1/
+            
     # Profile widget configurations
     - 
         # latest posts
-        position: right
+        position: left
         type: recent_posts
 
     # Table of contents widget configurations
@@ -302,38 +318,6 @@ widgets:
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
 
-    # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
-
-    # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
-
-    # Follow.it email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: followit
-        # Hint text under the email input
-        description: 
-        # Subscription form action URL
-        action_url: ''
-        # Feed claiming verification code
-        verification_code: ''
-        
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
@@ -411,6 +395,7 @@ plugins:
     twitter_conversion_tracking:
         # Twitter Pixel ID
         pixel_id: 
+            
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:

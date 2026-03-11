@@ -1,8 +1,8 @@
 /* source/css/custom.css */
 /* 自定义CSDN图标样式 */
 .csdn-icon {
-    /* 使用CSDN官方图标（在线链接） */
-    background: url("https://g.csdnimg.cn/static/logo/favicon32.ico") no-repeat center center;
+    /* 使用CSDN官方图标（在线链接）https://csdnimg.cn/public/favicon.ico */
+    background: url("/images/csdn.png") no-repeat center center;
     background-size: 16px 16px;  /* 图标大小 */
     display: inline-block;
     width: 16px;  /* 图标宽度 */
@@ -13,4 +13,18 @@
 /* 兼容Icarus主题的图标样式 */
 .social-links a[title="CSDN"] i.csdn-icon {
     font-size: 0;  /* 清空默认字体 */
+}
+
+/* 强制显示 Profile 组件和头像，优先级最高 */
+.profile-widget {
+    display: block !important;
+    visibility: visible !important;
+}
+.profile-widget .avatar {
+    width: 120px !important;   /* 强制设置宽度 */
+    height: 120px !important;  /* 强制设置高度 */
+    display: block !important; /* 强制显示 */
+    border-radius: 50% !important; /* 配合 avatar_rounded: true */
+    background: none !important; /* 清空背景干扰 */
+    margin: 0 auto !important; /* 居中显示 */
 }

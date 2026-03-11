@@ -2,7 +2,7 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords: null
-author: GinPd
+author: 
 language: zh-CN
 timezone: ''
 url: https://GinPd.github.io
@@ -66,3 +66,4 @@ deploy:
   type: git
   repo: git@github.com:GinPd/GinPd.github.io.git
   branch: main
+
