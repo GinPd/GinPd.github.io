@@ -8,11 +8,6 @@ toc: true
 ---
 
 
-
-# 如何将hexo推送到github
-
-好的，我们来做一次 ​**Git 仓库的全面初始化**，包括清理之前的推送记录，重新建立一个干净的仓库并推送到 GitHub Pages。以下是完整流程：
-
 ---
 
 ### 🔧 全面初始化步骤
@@ -56,7 +51,7 @@ toc: true
    git push -u origin main --force
    ```
 
-   ⚠️ 注意：这会覆盖远程仓库的历史记录，只保留你本地的内容。
+   ⚠️ 注意：这会覆盖远程仓库的历史记录，只保留本地的内容。
 
 ---
 
@@ -69,9 +64,6 @@ toc: true
 - ​`git add . && git commit` → 提交代码
 - ​`git push -u origin main --force` → 推送到 GitHub Pages
 
-这样你就能得到一个 ​**全新的 Git 仓库**，并且远程仓库会完全同步你的本地内容。
-
-要不要我帮你再整理一份 ​**Hexo 博客部署到 GitHub Pages的完整流程清单**​（包括 `hexo generate`​ 和 `hexo deploy`），这样你就能一步步完成博客上线？
 
 [基于 Hexo 和 GitHub Pages 搭建博客并实现思源笔记一键发布 - DUKE'S BLOG](https://duke-zhu.top/post/build-a-blog-based-on-hexo-and-github-pages-and-realize-oneclick-release-of-siyuan-notes-z1ji8uo.html)
 
